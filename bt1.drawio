@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-14T04:38:21.618Z" agent="RikkeiTool" version="24.0.0">
+  <diagram id="Page-1" name="Sơ đồ Activity Diagram TO-BE Xử lý Cập nhật Thiết bị Thông minh an toàn Falsy">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Bắt đầu" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#27ae60;strokeColor=#2ecc71;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="50" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="find" value="Tìm thiết bị theo ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="140" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_null" value="Thiết bị tồn tại?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="230" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="return_false" value="Trả về false" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="140" y="320" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_name" value="Tên có tồn tại?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="410" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="up_name" value="Cập nhật tên" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="500" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_active" value="isActive !== undefined?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="590" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="up_active" value="Cập nhật isActive (kể cả false)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="680" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="check_power" value="powerWatts !== undefined?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="770" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="up_power" value="Cập nhật powerWatts (kể cả 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="860" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="return_true" value="Trả về true" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="950" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="end_fail" value="Kết thúc lỗi" style="ellipse;html=1;shape=endState;fillColor=#e74c3c;strokeColor=#c0392b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1040" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="end_success" value="Kết thúc thành công" style="ellipse;html=1;shape=endState;fillColor=#e74c3c;strokeColor=#c0392b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="1130" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="start" target="find">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="find" target="check_null">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="Không tìm thấy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_null" target="return_false">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="return_false" target="end_fail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="Tìm thấy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_null" target="check_name">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" value="Có" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_name" target="up_name">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" value="Không" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_name" target="check_active">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="up_name" target="check_active">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_8" value="Không undefined" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_active" target="up_active">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_9" value="Undefined" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_active" target="check_power">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="up_active" target="check_power">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_11" value="Không undefined" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_power" target="up_power">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_12" value="Undefined" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="check_power" target="return_true">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="up_power" target="return_true">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#333333;endArrow=block;endFill=1;fontSize=10;fontColor=#e74c3c;fontStyle=1;" edge="1" parent="1" source="return_true" target="end_success">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
